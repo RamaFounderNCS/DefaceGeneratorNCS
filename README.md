@@ -72,4 +72,4 @@ Tool ini menggunakan **MIT License** — lihat file [LICENSE](LICENSE) untuk det
 - **MR.M05T3R** – Architect & Reviewer  
 
 Jika ada masalah atau ide fitur baru, silakan open an issue atau diskusi.  
-Untuk komunikasi langsung, hubungi Telegram: [@MR_M05T3R](https://t.me/MR_M05T3R)
+Untuk komunikasi langsung, hubungi WhatsApp: [MR.M05T3R](https://wa.me/6283846681933)
