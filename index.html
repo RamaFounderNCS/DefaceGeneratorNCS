@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Elite Deface Generator">
+  <title>N.C.S DEFACE GENERATOR</title>
+  <link rel="icon" href="https://i.ibb.co/dsMSfPqj/056.png" type="image/jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      padding-bottom: 100px;
+    }
+    h1, h4, label {
+      color: #0ff;
+    }
+    textarea.form-control {
+      background: #111;
+      color: #0f0;
+    }
+    .form-control::placeholder {
+      color: #999;
+    }
+    .btn-custom {
+      background-color: #ff0040;
+      color: white;
+      border: none;
+      font-weight: bold;
+    }
+    .btn-custom:hover {
+      background-color: #cc0033;
+    }
+    .generator-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid generator-container py-5">
+    <div class="text-center mb-5">
+      <h1>N.C.S DEFACE GENERATOR</h1>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label>URL Gambar:</label>
+            <input type="text" id="gambar" class="form-control" placeholder="https://i.ibb.co/dsMSfPqj/056.png">
+          </div>
+          <div class="col-md-6">
+            <label>Warna Background:</label>
+            <input type="text" id="background" class="form-control" placeholder="#000 / RED / BLUE">
+          </div>
+          <div class="col-md-12">
+            <label>URL Icon:</label>
+            <input type="text" id="icon" class="form-control" placeholder="https://i.ibb.co/dsMSfPqj/056.png">
+          </div>
+          <div class="col-md-6">
+            <label>Nama:</label>
+            <input type="text" id="nick" class="form-control" placeholder="username">
+          </div>
+          <div class="col-md-3">
+            <label>Warna:</label>
+            <input type="text" id="warna_nick" class="form-control" placeholder="#fff">
+          </div>
+          <div class="col-md-3">
+            <label>Font:</label>
+            <select id="font_nick" class="form-control">
+              <option>Orbitron</option>
+              <option>Arial</option>
+              <option>Comic Sans MS</option>
+              <option>Courier New</option>
+              <option>Impact</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label>Team:</label>
+            <input type="text" id="tim" class="form-control" placeholder="NEWBIE CYBER SECURITY">
+          </div>
+          <div class="col-md-3">
+            <label>Warna:</label>
+            <input type="text" id="warna_tim" class="form-control" placeholder="#0ff">
+          </div>
+          <div class="col-md-3">
+            <label>Font:</label>
+            <select id="font_tim" class="form-control">
+              <option>Orbitron</option>
+              <option>Arial</option>
+              <option>Comic Sans MS</option>
+              <option>Courier New</option>
+              <option>Impact</option>
+            </select>
+          </div>
+          <div class="col-md-12">
+            <label>Kata 1:</label>
+            <input type="text" id="kata1" class="form-control" placeholder="Pesan Buat Admin.">
+          </div>
+          <div class="col-md-12">
+            <label>Kata 2:</label>
+            <input type="text" id="kata2" class="form-control" placeholder="Pesan Buat Admin.">
+          </div>
+          <div class="col-md-12">
+            <label>Kata 3:</label>
+            <input type="text" id="kata3" class="form-control" placeholder="Pesan Buat Admin.">
+          </div>
+          <div class="col-md-12">
+            <label>Thanks To:</label>
+            <input type="text" id="thanks" class="form-control" placeholder="All Supporters">
+          </div>
+          <div class="col-md-12 text-center">
+            <button onclick="generateScript()" class="btn btn-custom mt-3">Generate Script</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h4 class="mb-3">Hasil Script HTML</h4>
+        <textarea id="hasil" class="form-control" rows="30" readonly></textarea>
+      </div>
+    </div>
+    <footer class="text-center mt-5">
+      <small>&copy; 2025 NEWBIE CYBER SECURITY | <a href="https://github.com/RamaFounderNCS" target="_blank" style="color:#0ff">RAMAFOUNDERNCS</a></small>
+    </footer>
+  </div>
+
+  <script>
+    function generateScript() {
+      const get = id => document.getElementById(id).value;
+      const html = `<!DOCTYPE html>
+<html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Hacked By ${get('nick')} - ${get('tim')}</title>
+<link rel='icon' href='${get('icon')}'><style>
+body{background:${get('background')};color:white;text-align:center;font-family:sans-serif;padding:30px;}
+h1{color:${get('warna_nick')};font-family:${get('font_nick')}}
+h2{color:${get('warna_tim')};font-family:${get('font_tim')}}
+p.kata1,p.kata2,p.kata3{font-size:20px;margin:20px auto}
+</style></head><body>
+<img src='${get('gambar')}' style='width:30%;max-width:300px'><br>
+<h1>Hacked By ${get('nick')}</h1>
+<h2>${get('tim')}</h2>
+<p class='kata1'>${get('kata1')}</p>
+<p class='kata2'>${get('kata2')}</p>
+<p class='kata3'>${get('kata3')}</p>
+<marquee style='margin-top:50px;color:${get('warna_tim')};font-weight:bold;'>Thanks To: ${get('thanks')}</marquee>
+</body></html>`;
+      document.getElementById('hasil').value = html;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
