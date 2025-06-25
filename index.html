@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Deface Generator Elite Tool by N.C.S" />
   <meta name="author" content="NEWBIE CYBER SECURITY" />
+  <meta name="description" content="Elite Deface Generator" />
   <title>N.C.S Deface Generator</title>
   <link rel="icon" href="https://i.ibb.co/dsMSfPqj/056.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Montserrat&display=swap" rel="stylesheet" />
   <style>
     html {
       scroll-behavior: smooth;
     }
     body {
-      background: linear-gradient(to right, #000, #1a1a1a);
+      background: linear-gradient(to right, #000, #111);
       color: #00ffe1;
       font-family: 'Orbitron', sans-serif;
-      padding-bottom: 60px;
     }
     h1, h4, label {
       color: #0ff;
@@ -35,7 +34,7 @@
       font-weight: bold;
       border: none;
       border-radius: 8px;
-      transition: all 0.3s ease-in-out;
+      transition: 0.3s;
     }
     .btn-custom {
       background: #ff0055;
@@ -61,8 +60,10 @@
       margin-top: 20px;
     }
     footer {
-      padding-top: 40px;
+      margin-top: 50px;
+      padding: 20px;
       color: #888;
+      font-size: 14px;
     }
     footer a {
       color: #0ff;
@@ -75,35 +76,35 @@
 </head>
 <body>
   <div class="container py-5">
-    <div class="text-center mb-5">
-      <h1 class="fw-bold">N.C.S Deface Generator</h1>
+    <div class="text-center mb-4">
+      <h1>N.C.S Deface Generator</h1>
     </div>
     <div class="row g-4">
-      <!-- Input Form -->
+      <!-- Input Panel -->
       <div class="col-lg-6">
         <div class="row g-3">
           <div class="col-md-6">
             <label>URL Gambar:</label>
-            <input type="url" id="gambar" class="form-control" placeholder="https://i.ibb.co/xxx/xxx.png" />
+            <input type="url" id="gambar" class="form-control" placeholder="https://i.ibb.co/xxx/xxx.png">
           </div>
           <div class="col-md-6">
             <label>Warna Background:</label>
-            <input type="text" id="background" class="form-control" placeholder="#000 / RED / BLUE" />
+            <input type="text" id="background" class="form-control" placeholder="#000 / RED">
           </div>
           <div class="col-md-12">
             <label>URL Icon:</label>
-            <input type="url" id="icon" class="form-control" placeholder="https://i.ibb.co/xxx/xxx.png" />
+            <input type="url" id="icon" class="form-control" placeholder="https://i.ibb.co/xxx/xxx.png">
           </div>
           <div class="col-md-6">
             <label>Nama:</label>
-            <input type="text" id="nick" class="form-control" placeholder="username" />
+            <input type="text" id="nick" class="form-control" placeholder="username">
           </div>
           <div class="col-md-3">
-            <label>Warna:</label>
-            <input type="text" id="warna_nick" class="form-control" placeholder="#fff" />
+            <label>Warna Nama:</label>
+            <input type="text" id="warna_nick" class="form-control" placeholder="#fff">
           </div>
           <div class="col-md-3">
-            <label>Font:</label>
+            <label>Font Nama:</label>
             <select id="font_nick" class="form-control">
               <option>Orbitron</option>
               <option>Arial</option>
@@ -114,14 +115,14 @@
           </div>
           <div class="col-md-6">
             <label>Team:</label>
-            <input type="text" id="tim" class="form-control" placeholder="NEWBIE CYBER SECURITY" />
+            <input type="text" id="tim" class="form-control" placeholder="NEWBIE CYBER SECURITY">
           </div>
           <div class="col-md-3">
-            <label>Warna:</label>
-            <input type="text" id="warna_tim" class="form-control" placeholder="#0ff" />
+            <label>Warna Team:</label>
+            <input type="text" id="warna_tim" class="form-control" placeholder="#0ff">
           </div>
           <div class="col-md-3">
-            <label>Font:</label>
+            <label>Font Team:</label>
             <select id="font_tim" class="form-control">
               <option>Orbitron</option>
               <option>Arial</option>
@@ -132,19 +133,37 @@
           </div>
           <div class="col-md-12">
             <label>Kata 1:</label>
-            <input type="text" id="kata1" class="form-control" placeholder="Pesan Buat Admin." />
+            <input type="text" id="kata1" class="form-control" placeholder="Pesan 1">
+          </div>
+          <div class="col-md-6">
+            <label>Font Pesan:</label>
+            <select id="font_pesan" class="form-control">
+              <option>Arial</option>
+              <option>Courier New</option>
+              <option>Verdana</option>
+              <option>Comic Sans MS</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label>Warna Pesan:</label>
+            <input type="text" id="warna_pesan" class="form-control" placeholder="#ff0">
           </div>
           <div class="col-md-12">
             <label>Kata 2:</label>
-            <input type="text" id="kata2" class="form-control" placeholder="Pesan Buat Admin." />
+            <input type="text" id="kata2" class="form-control" placeholder="Pesan 2">
           </div>
           <div class="col-md-12">
             <label>Kata 3:</label>
-            <input type="text" id="kata3" class="form-control" placeholder="Pesan Buat Admin." />
+            <input type="text" id="kata3" class="form-control" placeholder="Pesan 3">
           </div>
           <div class="col-md-12">
             <label>Thanks To:</label>
-            <input type="text" id="thanks" class="form-control" placeholder="All Supporters" />
+            <input type="text" id="thanks" class="form-control" placeholder="All Supporters">
+          </div>
+          <div class="col-md-12">
+            <label>URL Musik atau Upload:</label>
+            <input type="url" id="musik_url" class="form-control mb-2" placeholder="https://example.com/audio.mp3" />
+            <input type="file" id="musik_file" accept="audio/*" class="form-control" />
           </div>
           <div class="col-12 text-center">
             <button onclick="generateScript()" class="btn btn-custom mt-3 px-4">Generate Script</button>
@@ -152,7 +171,7 @@
         </div>
       </div>
 
-      <!-- Output & Preview -->
+      <!-- Output Panel -->
       <div class="col-lg-6">
         <h4 class="text-center mb-3">Hasil Script HTML</h4>
         <textarea id="hasil" class="form-control mb-2" rows="10" readonly></textarea>
@@ -164,8 +183,8 @@
       </div>
     </div>
 
-    <footer class="text-center">
-      <small>&copy; 2025 NEWBIE CYBER SECURITY | <a href="https://github.com/RamaFounderNCS" target="_blank">RAMAFOUNDERNCS</a></small>
+    <footer class="text-center mt-5">
+      <small>&copy; 2025 NEWBIE CYBER SECURITY | Powered by <a href="https://github.com/RamaFounderNCS" target="_blank">RAMAFOUNDERNCS</a></small>
     </footer>
   </div>
 
@@ -174,6 +193,12 @@
     const get = id => document.getElementById(id).value;
 
     function generateScript() {
+      let musikSrc = get("musik_url");
+      const file = document.getElementById("musik_file").files[0];
+      if (file) {
+        musikSrc = URL.createObjectURL(file);
+      }
+
       const html = `<!DOCTYPE html>
 <html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>Hacked By ${get('nick')} - ${get('tim')}</title>
@@ -181,8 +206,9 @@
 body{background:${get('background')};color:white;text-align:center;font-family:sans-serif;padding:30px;}
 h1{color:${get('warna_nick')};font-family:${get('font_nick')}}
 h2{color:${get('warna_tim')};font-family:${get('font_tim')}}
-p{font-size:20px;margin:20px auto}
+p{color:${get('warna_pesan')};font-family:${get('font_pesan')};font-size:20px;margin:20px auto}
 </style></head><body>
+<audio autoplay loop hidden><source src="${musikSrc}" type="audio/mpeg"></audio>
 <img src='${get('gambar')}' style='width:30%;max-width:300px'><br>
 <h1>Hacked By ${get('nick')}</h1>
 <h2>${get('tim')}</h2>
@@ -190,34 +216,29 @@ p{font-size:20px;margin:20px auto}
 <p>${get('kata2')}</p>
 <p>${get('kata3')}</p>
 <marquee style='margin-top:50px;color:${get('warna_tim')};font-weight:bold;'>Thanks To: ${get('thanks')}</marquee>
+<footer style="margin-top:50px;color:#888;">Powered by N.C.S Deface Generator</footer>
 </body></html>`;
 
       document.getElementById("hasil").value = html;
-
-      const iframe = document.getElementById("preview");
       const blob = new Blob([html], { type: "text/html" });
-      iframe.src = URL.createObjectURL(blob);
+      document.getElementById("preview").src = URL.createObjectURL(blob);
     }
 
     async function copyScript() {
-      const hasil = document.getElementById("hasil").value;
       try {
-        await navigator.clipboard.writeText(hasil);
+        await navigator.clipboard.writeText(document.getElementById("hasil").value);
         alert("Script berhasil disalin!");
-      } catch (err) {
+      } catch {
         alert("Gagal menyalin script.");
       }
     }
 
     function downloadScript() {
-      const text = document.getElementById("hasil").value;
-      const blob = new Blob([text], { type: "text/html" });
+      const blob = new Blob([document.getElementById("hasil").value], { type: "text/html" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
       link.download = "deface.html";
-      document.body.appendChild(link);
       link.click();
-      document.body.removeChild(link);
     }
   </script>
 </body>
