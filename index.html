@@ -3,35 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Elite Deface Generator" />
+  <meta name="description" content="Deface Generator Elite Tool by N.C.S" />
+  <meta name="author" content="NEWBIE CYBER SECURITY" />
   <title>N.C.S Deface Generator</title>
   <link rel="icon" href="https://i.ibb.co/dsMSfPqj/056.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       background: linear-gradient(to right, #000, #1a1a1a);
       color: #00ffe1;
       font-family: 'Orbitron', sans-serif;
+      padding-bottom: 60px;
     }
     h1, h4, label {
       color: #0ff;
     }
-    textarea.form-control {
+    .form-control {
       background: #111;
       color: #0f0;
       font-family: monospace;
+      border: 1px solid #0ff;
     }
     .form-control::placeholder {
-      color: #888;
+      color: #777;
+    }
+    .btn-custom, .btn-copy, .btn-download {
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
     }
     .btn-custom {
       background: #ff0055;
-      color: #fff;
-      border: none;
-      font-weight: bold;
-      transition: 0.3s;
-      border-radius: 8px;
+      color: white;
     }
     .btn-custom:hover {
       background: #cc0033;
@@ -39,9 +47,6 @@
     .btn-copy, .btn-download {
       background: #0ff;
       color: #000;
-      border: none;
-      font-weight: bold;
-      border-radius: 8px;
       margin: 5px;
     }
     .btn-copy:hover, .btn-download:hover {
@@ -55,20 +60,31 @@
       border-radius: 10px;
       margin-top: 20px;
     }
+    footer {
+      padding-top: 40px;
+      color: #888;
+    }
+    footer a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <div class="container-fluid generator-container py-5 px-3">
+  <div class="container py-5">
     <div class="text-center mb-5">
-      <h1>N.C.S Deface Generator</h1>
+      <h1 class="fw-bold">N.C.S Deface Generator</h1>
     </div>
     <div class="row g-4">
+      <!-- Input Form -->
       <div class="col-lg-6">
         <div class="row g-3">
-          <!-- Input Form Fields -->
           <div class="col-md-6">
             <label>URL Gambar:</label>
-            <input type="text" id="gambar" class="form-control" placeholder="https://i.ibb.co/dsMSfPqj/056.png" />
+            <input type="url" id="gambar" class="form-control" placeholder="https://i.ibb.co/xxx/xxx.png" />
           </div>
           <div class="col-md-6">
             <label>Warna Background:</label>
@@ -76,7 +92,7 @@
           </div>
           <div class="col-md-12">
             <label>URL Icon:</label>
-            <input type="text" id="icon" class="form-control" placeholder="https://i.ibb.co/dsMSfPqj/056.png" />
+            <input type="url" id="icon" class="form-control" placeholder="https://i.ibb.co/xxx/xxx.png" />
           </div>
           <div class="col-md-6">
             <label>Nama:</label>
@@ -130,13 +146,13 @@
             <label>Thanks To:</label>
             <input type="text" id="thanks" class="form-control" placeholder="All Supporters" />
           </div>
-          <div class="col-md-12 text-center">
-            <button onclick="generateScript()" class="btn btn-custom mt-3">Generate Script</button>
+          <div class="col-12 text-center">
+            <button onclick="generateScript()" class="btn btn-custom mt-3 px-4">Generate Script</button>
           </div>
         </div>
       </div>
 
-      <!-- Output Panel -->
+      <!-- Output & Preview -->
       <div class="col-lg-6">
         <h4 class="text-center mb-3">Hasil Script HTML</h4>
         <textarea id="hasil" class="form-control mb-2" rows="10" readonly></textarea>
@@ -144,16 +160,16 @@
           <button class="btn btn-copy" onclick="copyScript()">Copy Script</button>
           <button class="btn btn-download" onclick="downloadScript()">Download .html</button>
         </div>
-        <iframe id="preview" class="preview-frame mt-4"></iframe>
+        <iframe id="preview" class="preview-frame"></iframe>
       </div>
     </div>
 
-    <footer class="text-center mt-5">
+    <footer class="text-center">
       <small>&copy; 2025 NEWBIE CYBER SECURITY | <a href="https://github.com/RamaFounderNCS" target="_blank">RAMAFOUNDERNCS</a></small>
     </footer>
   </div>
 
-  <!-- Script Section -->
+  <!-- Script -->
   <script>
     const get = id => document.getElementById(id).value;
 
@@ -165,14 +181,14 @@
 body{background:${get('background')};color:white;text-align:center;font-family:sans-serif;padding:30px;}
 h1{color:${get('warna_nick')};font-family:${get('font_nick')}}
 h2{color:${get('warna_tim')};font-family:${get('font_tim')}}
-p.kata1,p.kata2,p.kata3{font-size:20px;margin:20px auto}
+p{font-size:20px;margin:20px auto}
 </style></head><body>
 <img src='${get('gambar')}' style='width:30%;max-width:300px'><br>
 <h1>Hacked By ${get('nick')}</h1>
 <h2>${get('tim')}</h2>
-<p class='kata1'>${get('kata1')}</p>
-<p class='kata2'>${get('kata2')}</p>
-<p class='kata3'>${get('kata3')}</p>
+<p>${get('kata1')}</p>
+<p>${get('kata2')}</p>
+<p>${get('kata3')}</p>
 <marquee style='margin-top:50px;color:${get('warna_tim')};font-weight:bold;'>Thanks To: ${get('thanks')}</marquee>
 </body></html>`;
 
@@ -183,11 +199,14 @@ p.kata1,p.kata2,p.kata3{font-size:20px;margin:20px auto}
       iframe.src = URL.createObjectURL(blob);
     }
 
-    function copyScript() {
-      const hasil = document.getElementById("hasil");
-      hasil.select();
-      document.execCommand("copy");
-      alert("Script berhasil disalin!");
+    async function copyScript() {
+      const hasil = document.getElementById("hasil").value;
+      try {
+        await navigator.clipboard.writeText(hasil);
+        alert("Script berhasil disalin!");
+      } catch (err) {
+        alert("Gagal menyalin script.");
+      }
     }
 
     function downloadScript() {
@@ -196,8 +215,10 @@ p.kata1,p.kata2,p.kata3{font-size:20px;margin:20px auto}
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
       link.download = "deface.html";
+      document.body.appendChild(link);
       link.click();
+      document.body.removeChild(link);
     }
   </script>
 </body>
-        </html>
+</html>
